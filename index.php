@@ -25,5 +25,10 @@ $f3->route('GET /', function () {
     echo $view->render("views/pet-home.html");
 });
 
+$f3->route('GET /order', function () {
+	$view = new Template();
+	echo $view->render("views/pet-order.html");
+});
+
 $f3->run();
 
