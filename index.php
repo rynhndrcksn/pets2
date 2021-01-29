@@ -29,11 +29,24 @@ $f3->route('GET /order', function () {
 	$view = new Template();
 	echo $view->render("views/pet-order.html");
 });
-  $f3->route('POST /order2', function () {
-    var_dump($_POST);
-    $view = new Template();
-    echo $view->render("views/pet-order2.html");
-  });
+
+$f3->route('POST /order2', function () {
+	var_dump($_POST);
+	$view = new Template();
+	echo $view->render("views/pet-order2.html");
+});
+
+$f3->route('POST /order3', function () {
+	var_dump($_POST);
+	$view = new Template();
+	echo $view->render("views/pet-order3.html");
+});
+
+$f3->route('POST /summary', function () {
+	var_dump($_POST);
+	$view = new Template();
+	echo $view->render("views/order-summary.html");
+});
 
 $f3->run();
 
