@@ -17,11 +17,11 @@
 
 	<form action="order2" method="POST">
 		<div class="input-group">
-			<label for="pet">What kind of pet would you like to order?</label>
-			<input type="text" id="pet" name="pet">
+			<label for="petType">What kind of pet would you like to order?</label>
+			<input type="text" id="petType" name="petType">
 		</div>
 
-		<select class="pet-color mb-2" aria-label="pick your pets color">
+		<select class="pet-color mb-2" aria-label="pick your pets color" name="petColor">
 			<option selected>Choose a pet color</option>
 			<option value="red">Red</option>
 			<option value="green">Green</option>
@@ -33,9 +33,8 @@
 </div>
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-				integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-				crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
