@@ -23,9 +23,8 @@ $f3 = Base::instance();
 $f3->set('DEBUG', 3);
 
 $f3->route('GET /', function () {
-	//echo 'My Pets';
-    $view = new Template();
-    echo $view->render("views/pet-home.html");
+	$view = new Template();
+	echo $view->render("views/pet-home.html");
 });
 
 $f3->route('GET /order', function () {
@@ -34,7 +33,6 @@ $f3->route('GET /order', function () {
 });
 
 $f3->route('POST /order2', function () {
-	var_dump($_POST);
 	if(isset($_POST['petType'])){
 	  $_SESSION['petType'] = $_POST['petType'];
   }
@@ -46,19 +44,17 @@ $f3->route('POST /order2', function () {
 });
 
 $f3->route('POST /order3', function () {
-  /*if(isset($_POST['petName'])){
+  if(isset($_POST['petName'])){
     $_SESSION['petName'] = $_POST['petName'];
-  }*/
-	var_dump($_POST);
+  }
 	$view = new Template();
 	echo $view->render("views/pet-order3.html");
 });
 
 $f3->route('POST /summary', function () {
-  if(isset($_POST['petName'])){
-    $_SESSION['petName'] = $_POST['petName'];
-  }
-	var_dump($_POST);
+	if(isset($_POST['petSize'])){
+		$_SESSION['petSize'] = $_POST['petSize'];
+	}
 	$view = new Template();
 	echo $view->render("views/order-summary.html");
 });
